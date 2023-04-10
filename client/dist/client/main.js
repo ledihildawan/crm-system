@@ -1697,7 +1697,7 @@
       /*! no static exports found */
       /***/ function (module, exports) {
         module.exports =
-          '<div class="page-title">\n  <h4>Categories</h4>\n  <button\n    class="waves-effect waves-light btn grey darken-1"\n    routerLink="/categories/new"\n  >\n    Добавить категорию\n  </button>\n</div>\n\n<div\n  class="row"\n  *ngIf="categories$ | async as categories; else loader"\n>\n  <div class="col s12">\n    <div class="collection" *ngIf="categories.length !== 0; else empty">\n      <a\n        *ngFor="let category of categories"\n        [routerLink]="[\'/categories\', category._id]"\n        class="collection-item"\n      >\n        {{category.name}}\n      </a>\n    </div>\n    <ng-template #empty>\n      <div class="center">\n        You don't have any Categories\n      </div>\n    </ng-template>\n  </div>\n</div>\n\n<ng-template #loader>\n  <app-loader></app-loader>\n</ng-template>\n\n';
+          '<div class="page-title">\n  <h4>Categories</h4>\n  <button\n    class="waves-effect waves-light btn grey darken-1"\n    routerLink="/categories/new"\n  >\n    Добавить категорию\n  </button>\n</div>\n\n<div\n  class="row"\n  *ngIf="categories$ | async as categories; else loader"\n>\n  <div class="col s12">\n    <div class="collection" *ngIf="categories.length !== 0; else empty">\n      <a\n        *ngFor="let category of categories"\n        [routerLink]="[\'/categories\', category._id]"\n        class="collection-item"\n      >\n        {{category.name}}\n      </a>\n    </div>\n    <ng-template #empty>\n      <div class="center">\n        You don\'t have any Categories\n      </div>\n    </ng-template>\n  </div>\n</div>\n\n<ng-template #loader>\n  <app-loader></app-loader>\n</ng-template>\n\n';
 
         /***/
       },
